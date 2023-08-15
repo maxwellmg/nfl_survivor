@@ -1,0 +1,38 @@
+Figuring out Survivor Pool
+
+Grid
+?
+
+Teams
+  -32
+  -Every team will have a line/odds each week
+  -figure out whether the line is more precise or odds
+  -create a list (possibly a hash) for each team's week (k) and odds (v)
+  -if a team is selected, it has to then be "invisible" for every other week
+
+Scraping
+  -Find the odds online projected for the whole season
+  -Scrape the games and lines
+    -that'll leave you with 18 lists (one for each week)
+
+Moving on...
+  -now theres 32 lists/hashes (one for each team)
+  -OR now theres 18 lists (one for each week)
+  -OR now theres 1 list. If its one set i think you can run through more effectively.
+    -one list/hash that contains matchup/week/odds.
+      - {teamweek: odds}
+      - i.e. {PHL3: -350} == Week 3 Eagles Odds
+        - Possibly want to add home/away info to hash? in case of a tie
+          - {PHL3(H): -350}
+      - Every key is unique
+      - Loop exactly 18 times. Check for the greatest value, then see if anything matches it.
+        -If its all alone, we're going to remove every other option in the hash that matches on the week, and matches on the team. Then go to the next loop and do it again
+          -If the team matches itself for a different week, probably want to choose the earlier week?
+            -? review ^
+          -If the week matches itself, multiple teams have the best odds.
+            -? review ^
+
+Prioritization
+  -if two teams have the same odds, which do you pick?
+  -can we create different routes when odds are close?
+  -we should prefer games with greater odds at the beginning compared to the end
