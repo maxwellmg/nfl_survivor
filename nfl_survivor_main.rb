@@ -5,9 +5,9 @@ theoretical_hash = {"PHL1" => 100, "NYG1" => 150, "DAL1" => 300, "WSH1" => -150,
 best_path_list = []
 
 3.downto(1) do
-  greatest_value = 0
+  greatest_value = 1000
   for team, odds in theoretical_hash
-    if odds > greatest_value
+    if odds < greatest_value
       greatest_value = odds
     end
   for team, odds in theoretical_hash
