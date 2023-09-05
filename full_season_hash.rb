@@ -614,3 +614,21 @@ List_of_every_spread =
 "WSH7 115",
 "WSH8 154",
 "WSH9 145"]
+
+new_list = []
+
+for item in List_of_every_spread do
+    new_list << item.split(" ")
+end
+
+new_hash = new_list.to_h()
+
+final_hash = {}
+
+for team, odds in new_hash
+    odds = odds.to_i()
+    final_hash.store(team,odds)
+    puts team, odds
+end
+
+puts final_hash
