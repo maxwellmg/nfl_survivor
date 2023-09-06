@@ -8,25 +8,25 @@ full_team_to_abbrev = {
     "CLE" => "Cleveland", 
     "DAL" => "Dallas", 
     "DEN" => "Denver", 
-    "GB" => "Green Bay",
+    "GRB" => "Green Bay",
     "TEN" => "Tennessee", 
     "IND" => "Indianapolis", 
-    "KC" => "Kansas City",
-    "LV" => "Las Vegas",
+    "KAC" => "Kansas City",
+    "LAV" => "Las Vegas",
     "LAR" => "Los Angeles Rams", 
     "MIA" => "Miami", 
     "MIN" => "Minnesota", 
-    "NE" => "New England",
-    "NO" => "New Orleans",
+    "NEE" => "New England",
+    "NEO" => "New Orleans",
     "NYG" => "New York Giants", 
     "NYJ" => "New York Jets", 
     "PHI" => "Philadelphia", 
     "ARI" => "Arizona", 
     "PIT" => "Pittsburgh", 
     "LAC" => "Los Angeles Chargers", 
-    "SF" => "San Francisco",
+    "SAF" => "San Francisco",
     "SEA" => "Seattle", 
-    "TB" => "Tampa Bay",
+    "TAB" => "Tampa Bay",
     "WSH" => "Washington", 
     "CAR" => "Carolina", 
     "JAX" => "Jacksonville", 
@@ -34,6 +34,7 @@ full_team_to_abbrev = {
     "HOU"  => "Houston" 
 }
 
+Abbreviation_addition = {"KC"=>"KAC","SF"=>"SAF","NE"=>"NEE", "NO"=>"NEO", "TB"=>"TAB", "LV"=>"LAV", "GB"=>"GRB"}
 
 atlanta_season_hash = {"ATL1" => -179, "ATL2" => -125,"ATL3" => 180, "ATL4" => 170, "ATL5" => -175, "ATL6" => -130, "ATL7" => -115, "ATL8" => -105, "ATL9" => -105, "ATL10" => -142, "ATL12" => -110, "ATL13" => -220, "ATL14" => -162, "ATL15" => -105, "ATL16" => -148, "ATL17" => 110, "ATL18" => 124}
 
@@ -628,7 +629,21 @@ final_hash = {}
 for team, odds in new_hash
     odds = odds.to_i()
     final_hash.store(team,odds)
-    puts team, odds
+    #puts team, odds
 end
 
-puts final_hash
+#puts final_hash
+
+for team, odds in atlanta_season_hash
+    if team.length = 4
+        puts team
+        puts "the length is 4"
+        #week = team[3]
+        #city = team[0, 2]
+    elsif team.length = 5
+        puts team
+        puts "the length is 5"
+        #week = team[3]
+        #city = team[0, 2]
+    end
+end
