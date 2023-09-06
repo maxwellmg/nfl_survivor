@@ -13,3 +13,5 @@ This project is designed to provide the best mathematical chance of success. Odd
 The plan is to scrape the odds each week (with Python) for up to date data, and rerun the Ruby program with said data to chart a course through the season.
 
 As of this writing (8/15/23) I do not know if I will make this repo public or if it will be paired with any front end beautification. TBD
+
+Betting odds: https://www.rotowire.com/betting/nfl/odds/week-18
