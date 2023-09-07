@@ -635,14 +635,16 @@ end
 #puts final_hash
 
 for team, odds in atlanta_season_hash
-    if team.length = 4
-        puts team
-        puts "the length is 4"
-        #week = team[3]
-        #city = team[0, 2]
-    elsif team.length = 5
-        puts team
-        puts "the length is 5"
+    
+    if team.length == 4
+        week = team[-1]
+        puts city
+        puts week
+    elsif team.length == 5
+        week = team[-2..-1]
+        puts city
+        puts week
+        #puts "the length is 5"
         #week = team[3]
         #city = team[0, 2]
     end
