@@ -15,3 +15,7 @@ The plan is to scrape the odds each week (with Python) for up to date data, and 
 (9/12/23) I have made the repo public, happy hunting. Also it turns out it's not reflected on GitHub when you make private commits. So thats fun. :/
 
 Betting odds: https://www.rotowire.com/betting/nfl/odds/week-18
+
+alt betting odds: https://sportsbook.draftkings.com/nfl-odds-week-3
+
+virtualenv for spidering: "scrapytsg"
