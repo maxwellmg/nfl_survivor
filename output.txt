@@ -1,0 +1,138 @@
+PHI17
+BUF8
+BAL1
+KAC3
+SAF4
+KAC3
+CIN10
+CLE9
+MIA6
+SEA7
+DAL12
+DET5
+NYG2
+
+0
+team:PHI17 odds: -535
+1
+team:BUF8 odds: -440
+2
+team:BAL1 odds: -420
+3
+team:KAC3 odds: -410
+team:SAF4 odds: -410
+4
+team:KAC3 odds: -410
+5
+team:CIN10 odds: -395
+6
+team:CLE9 odds: -325
+7
+team:MIA6 odds: -305
+8
+team:SEA7 odds: -300
+9
+team:DAL12 odds: -230
+10
+team:DET5 odds: -210
+11
+team:NYG2 odds: -195
+12
+13
+14
+15
+16
+17
+PHI17
+-535
+BUF8
+-440
+BAL1
+-420
+KAC3
+-410
+SAF4
+-410
+KAC3
+-410
+CIN10
+-395
+CLE9
+-325
+MIA6
+-305
+SEA7
+-300
+DAL12
+-230
+DET5
+-210
+NYG2
+-195
+
+
+
+
+
+
+PHI17
+-535
+
+BUF8
+-440
+
+BAL1
+-420
+
+KAC3
+SAF4
+KAC3
+KAC3
+
+KAC3
+-410
+
+CIN14
+CIN10
+-395
+DAL12
+-230
+NYG2
+-195
+
+
+
+PHI17
+-535
+
+BUF8
+-440
+
+BAL1
+-420
+
+KAC3
+
+SAF4
+-410
+
+CIN10
+-395
+
+CLE9
+-325
+
+MIA6
+-305
+
+SEA7
+-300
+
+DAL12
+-230
+
+DET5
+-210
+
+NYG2
+-195
