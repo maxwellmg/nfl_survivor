@@ -24,3 +24,34 @@ hash_2 = {"ARI1"=>210,"ARI10"=>120, "ARI11"=>120, "ARI12"=>110,"ARI13"=>210, "AR
 for team, odds in hash_2
   puts team, odds
 end
+
+
+PHI17
+BUF8
+BAL1
+KAC3
+SAF4
+KAC3
+CIN10
+CLE9
+MIA6
+SEA7
+DAL12
+DET5
+NYG2
+
+for team, odds in atlanta_season_hash
+    
+  if team.length == 4
+      week = team[-1]
+      puts city
+      puts week
+  elsif team.length == 5
+      week = team[-2..-1]
+      puts city
+      puts week
+      #puts "the length is 5"
+      #week = team[3]
+      #city = team[0, 2]
+  end
+end
