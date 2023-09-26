@@ -26,7 +26,7 @@ for team, odds in hash_2
 end
 
 
-PHI17
+"PHI17
 BUF8
 BAL1
 KAC3
@@ -38,7 +38,7 @@ MIA6
 SEA7
 DAL12
 DET5
-NYG2
+NYG2"
 
 for team, odds in atlanta_season_hash
     
@@ -55,3 +55,5 @@ for team, odds in atlanta_season_hash
       #city = team[0, 2]
   end
 end
+
+
