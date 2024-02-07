@@ -36,3 +36,19 @@ Prioritization
   -if two teams have the same odds, which do you pick?
   -can we create different routes when odds are close?
   -we should prefer games with greater odds at the beginning compared to the end
+.
+.
+.
+Coming back After Long Break
+  -Considering rewriting parts in Python since web scraping will factor in heavily
+  -previous system might have worked, but concept was flawed because updated odds do not come midseason
+  -To start, I'm going to focus on collecting several variables over a timespan (2000-2023): 
+    1. Weekly Power Ranking, which focus on intangibles and are derived from past performance (from at least 2 sources[espn, nfl, etc.])
+    2. Weekly Home vs Away game, which should impact future game outcome but would be separate from past Power Ranking
+    3. Weekly Game Outcome
+  -By collecting these three data points for each of the 32 teams in the NFL over a 20+ year span, I should be able to create a likelihood score of a future game outcome
+  -other important variables to track if possible:
+    1. playoff implications of game
+    2. divisional vs non divisional matchup
+    3. primetime game vs non primetime (collect date)
+    4. Weather for game
