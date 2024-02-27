@@ -105,7 +105,7 @@ for i in range(1, 4):
     test_dict.update({str(i), str(i + 1)})
     print(test_dict)
 print(test_dict)'''
-test_dict = {}
+'''test_dict = {}
 list_a = ["A", "B", "C"]
 #dict = {'key1': 'geeks', 'key2': 'for'}
 for item in list_a:
@@ -121,7 +121,7 @@ with open("power_rankings.json") as f:
     data.append(test_dict)
 with open("power_rankings.json", "w") as f:
     json.dump(data, f)
-f.close()
+f.close()'''
 '''
 def overwrite_save(variables, words_found, score, user_choice):
     with open("savefile.json") as f:
@@ -132,3 +132,25 @@ def overwrite_save(variables, words_found, score, user_choice):
     with open("savefile.json", "w") as f:
         json.dump(data, f)
     f.close()'''
+'''
+with open ("power_rankings.json") as f:
+    data = json.load(f)
+    print(data)
+    print(type(data))
+    for item in data:
+
+f.close()'''
+
+sample_dict = {'nfl week 9 power rankings site:espn.com after:2021-10-31 before:2021-11-04 ': 'https://www.espn.com/nfl/story/_/page/NFLpowerranking1102/nfl-power-rankings-week-9-1-32-poll-plus-team-biggest-weakness-going-forward', 'nfl week 8 power rankings site:espn.com after:2021-10-24 before:2021-10-28 ': 'https://www.espn.com/nfl/story/_/page/NFLpowerranking1026/nfl-power-rankings-week-8-1-32-poll-plus-one-thing-got-wrong-every-team'}
+
+# extracts relevant info from query to add to csv/json
+for k, v in sample_dict.items():
+    parsing = k.split(" ")
+    week = " ".join(parsing[1:3])
+    year = parsing[6].split(":")[1].split("-")[0]
+    month = parsing[6].split(":")[1].split("-")[1]
+    if month == "01":
+        year = str(int(year) - 1)
+    #print(year)
+    #print(month)
+    #print(week)
