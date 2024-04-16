@@ -31,6 +31,27 @@ def week1s_to_all_search_inputs(week_1_date_dict):
                 all_weeks.append(current_week + "*" + str(current_date) + "*" + str(current_thursday))
     return list(reversed(all_weeks))
 
+def nfl_thursday_to_wednesday_enumerator(): 
+    nfl_week_list = []
+
+    dates_dict = {
+        2000: "09-03-2000", 2001: "09-09-2001", 2002: "09-05-2002", 2003: "09-04-2003", 2004: "09-09-2004", 2005: "09-08-2005", 2006: "09-07-2006", 2007: "09-06-2007", 2008: "09-04-2008", 2009: "09-10-2009", 2010: "09-09-2010", 2011: "09-11-2011", 2012: "09-06-2012", 2013: "09-05-2013", 2014: "09-04-2014", 2015: "09-10-2015", 2016: "09-08-2016", 2017: "09-07-2017", 2018: "09-06-2018", 2019: "09-05-2019", 2020: "09-10-2020", 2021: "09-09-2021", 2022: "09-08-2022", 2023: "09-07-2023"
+    }
+
+    for year, start_date_str in dates_dict.items():
+        start_date = datetime.strptime(start_date_str, "%m-%d-%Y")
+
+        for i in range(17):
+            end_date = start_date + timedelta(days=6)
+            nfl_week_list.append(f"week_{i + 1}*{start_date.strftime('%m-%d-%Y')}*{end_date.strftime('%m-%d-%Y')}")
+            start_date = end_date + timedelta(days=1)
+
+    with open("nfl_thursday_to_wednesday.txt", "a") as f:
+        for line in nfl_week_list:
+            f.write(line)
+            f.write(", ")
+    f.close()
+
 # takes week, date from, date till info from week1s_to_all_search_inputs and creates string for google_api.py #
 # from google_api_inputs2 import adjusted_week_1_reversed as week_list
 
